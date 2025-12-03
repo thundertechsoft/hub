@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ShirtHub</title>
+    <meta name="description" content="Complete your purchase securely at ShirtHub. Enter shipping details and choose payment method.">
+</head>
+<body>
+    <!-- Header same as index.html -->
+
+    <main class="checkout-page">
+        <div class="container">
+            <h1 class="page-title">Checkout</h1>
+            
+            <div class="checkout-container">
+                <!-- CHECKOUT FORM -->
+                <div class="checkout-form-section">
+                    <form id="checkoutForm">
+                        <!-- CUSTOMER INFO -->
+                        <div class="checkout-section">
+                            <h2 class="section-title">Customer Information</h2>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                        </div>
+
+                        <!-- SHIPPING ADDRESS -->
+                        <div class="checkout-section">
+                            <h2 class="section-title">Shipping Address</h2>
+                            
+                            <div class="form-group">
+                                <label for="address">Street Address *</label>
+                                <input type="text" id="address" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">ZIP Code *</label>
+                                    <input type="text" id="zip" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="country">Country *</label>
+                                <select id="country" required>
+                                    <option value="">Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <!-- Add more countries -->
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- PAYMENT METHOD -->
+                        <div class="checkout-section">
+                            <h2 class="section-title">Payment Method</h2>
+                            
+                            <div class="payment-methods">
+                                <div class="payment-option">
+                                    <input type="radio" id="cod" name="payment" value="cod" checked>
+                                    <label for="cod">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        <span>Cash on Delivery</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-option">
+                                    <input type="radio" id="easypaisa" name="payment" value="easypaisa">
+                                    <label for="easypaisa">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <span>EasyPaisa (Coming Soon)</span>
+                                    </label>
+                                </div>
+                                
+                                <div class="payment-option">
+                                    <input type="radio" id="card" name="payment" value="card">
+                                    <label for="card">
+                                        <i class="fas fa-credit-card"></i>
+                                        <span>Credit/Debit Card</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- CARD DETAILS (Hidden by default) -->
+                            <div class="card-details" id="cardDetails" style="display: none;">
+                                <div class="form-group">
+                                    <label for="cardNumber">Card Number</label>
+                                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiry">Expiry Date</label>
+                                        <input type="text" id="expiry" placeholder="MM/YY">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" placeholder="123">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required>
+                                <span>I agree to the <a href="#">terms and conditions</a></span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- ORDER SUMMARY -->
+                <div class="checkout-summary">
+                    <h2 class="summary-title">Order Summary</h2>
+                    
+                    <div class="order-items" id="checkoutItems">
+                        <!-- Items loaded via JavaScript -->
+                    </div>
+                    
+                    <div class="summary-totals">
+                        <div class="total-row">
+                            <span>Subtotal</span>
+                            <span id="checkoutSubtotal">$0.00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Shipping</span>
+                            <span id="checkoutShipping">$5.99</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Tax</span>
+                            <span id="checkoutTax">$0.00</span>
+                        </div>
+                        
+                        <div class="total-row grand-total">
+                            <span>Total</span>
+                            <span id="checkoutTotal">$5.99</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary btn-place-order" id="placeOrderBtn">
+                        Place Order <i class="fas fa-lock"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer same as index.html -->
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/validation.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCheckoutItems();
+            updateCheckoutSummary();
+            initPaymentMethodToggle();
+            initCheckoutValidation();
+        });
+    </script>
+</body>
+</html>
