@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO FOR PRODUCTS PAGE -->
+    <title>All Shirts Collection | Formal, Casual, Designer Shirts | Shirt Hub</title>
+    <meta name="description" content="Browse complete collection of shirts. Formal shirts, casual shirts, designer shirts, cotton shirts. 500+ designs available.">
+    <meta name="keywords" content="all shirts collection, formal shirts, casual shirts, designer shirts, shirt collection, shirt catalog">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- BREADCRUMB SCHEMA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.shirthub.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "All Products",
+          "item": "https://www.shirthub.com/products.html"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <i class="fas fa-tshirt"></i>
+                        <h1>SHIRT <span>HUB</span></h1>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="products.html" class="active"><i class="fas fa-shopping-bag"></i> All Shirts</a></li>
+                    <li><a href="formal-shirts.html"><i class="fas fa-suitcase"></i> Formal</a></li>
+                    <li><a href="casual-shirts.html"><i class="fas fa-umbrella-beach"></i> Casual</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="products-page">
+        <div class="container">
+            <!-- PAGE HEADER WITH SEO TITLE -->
+            <div class="page-header">
+                <h1>All Shirts Collection</h1>
+                <p class="page-desc">Browse our complete range of premium quality shirts. 500+ designs available.</p>
+            </div>
+            
+            <!-- FILTERS -->
+            <div class="filters">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Formal</button>
+                <button class="filter-btn">Casual</button>
+                <button class="filter-btn">Designer</button>
+                <button class="filter-btn">Cotton</button>
+            </div>
+            
+            <!-- PRODUCTS GRID -->
+            <div class="products-grid" id="allProducts">
+                <!-- Products loaded by JavaScript -->
+            </div>
+            
+            <!-- PAGINATION FOR SEO -->
+            <div class="pagination">
+                <a href="#" class="page-btn"><i class="fas fa-chevron-left"></i> Previous</a>
+                <a href="#" class="page-btn active">1</a>
+                <a href="#" class="page-btn">2</a>
+                <a href="#" class="page-btn">3</a>
+                <a href="#" class="page-btn">Next <i class="fas fa-chevron-right"></i></a>
+            </div>
+            
+            <!-- SEO CONTENT -->
+            <div class="seo-content">
+                <h2>Premium Quality Shirts Online - Shirt Hub</h2>
+                <p>Shirt Hub offers the largest collection of premium quality shirts online in India. We specialize in:</p>
+                <ul>
+                    <li><strong>Formal Shirts:</strong> Perfect for office wear, meetings, and business occasions</li>
+                    <li><strong>Casual Shirts:</strong> Comfortable daily wear shirts for weekends and outings</li>
+                    <li><strong>Designer Shirts:</strong> Latest fashion trends and designer collections</li>
+                    <li><strong>100% Cotton Shirts:</strong> Pure cotton shirts for maximum comfort</li>
+                </ul>
+                <p>All our shirts are made with premium quality fabric, perfect stitching, and attention to detail. We offer free shipping across India and 30-day return policy.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
