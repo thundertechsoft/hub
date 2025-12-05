@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Shirt Hub</title>
+    <meta name="description" content="Your shopping cart at Shirt Hub. Review items, apply coupons, and proceed to checkout.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <!-- Same header -->
+    </header>
+
+    <main class="cart-page">
+        <div class="container">
+            <h1>Your Shopping Cart</h1>
+            
+            <div class="cart-container">
+                <!-- CART ITEMS -->
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items loaded by JavaScript -->
+                </div>
+                
+                <!-- ORDER SUMMARY -->
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>₹<span id="subtotal">0</span></span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>FREE</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Discount</span>
+                        <span>-₹<span id="discount">0</span></span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span>₹<span id="total">0</span></span>
+                    </div>
+                    
+                    <!-- COUPON -->
+                    <div class="coupon-box">
+                        <input type="text" placeholder="Enter coupon code" id="couponCode">
+                        <button onclick="applyCoupon()">Apply</button>
+                    </div>
+                    
+                    <!-- CHECKOUT BUTTON -->
+                    <button class="btn-checkout" onclick="goToCheckout()">
+                        Proceed to Checkout <i class="fas fa-arrow-right"></i>
+                    </button>
+                    
+                    <!-- CONTINUE SHOPPING -->
+                    <a href="products.html" class="continue-shopping">
+                        <i class="fas fa-arrow-left"></i> Continue Shopping
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Same footer -->
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
